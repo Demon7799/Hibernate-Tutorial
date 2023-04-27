@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">org.postgresql.Driver</property>
+		<property name="connection.url">jdbc:postgresql://localhost:5432/hibernate_mapping</property>
+		<property name="connection.username">postgres</property>
+		<property name="connection.password">vegeta</property>
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="show_sql">true</property>
+		<property name="hbm2ddl.auto">create</property>
+		
+		
+		<!-- Uncomment it when you want to run this OneToOne mapping program  
+		<mapping class="tutorial4.mapping.OneToOne.Questions" />
+		<mapping class="tutorial4.mapping.OneToOne.Answer" />
+		-->
+		
+		<!-- Uncomment it when to to run many to one or one to many program   
+		<mapping class="tutorial4.mapping.OneToMany_ManyToOne.Question" />
+		<mapping class="tutorial4.mapping.OneToMany_ManyToOne.Answers" />
+		-->
+		
+		<!-- Uncomment it when to to run many to many program 
+		<mapping class="tutorial4.mapping.ManyToMany.Employees" />
+		<mapping class="tutorial4.mapping.ManyToMany.Projects" />
+		-->
+		
+		
+
+	</session-factory>
+</hibernate-configuration>
